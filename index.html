@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pokemon</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" 
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script> 
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var N = 151;
+			for(var i=0; i< N; i++){
+				link = 'http://pokeapi.co/media/img/'+(i+1)+'.png';
+				$('main').append('<div class="img-div"><img src="'+link+'"></div>')
+			}
+
+
+			$('img').hover(
+				function(){$(this).fadeTo(200,.5)},
+				function(){$(this).fadeTo(100, 1)}
+			);
+
+
+		});
+
+	</script>
+</head>
+<body>
+
+	<main>
+	</main>
+
+</body>
+</html>
